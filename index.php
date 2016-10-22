@@ -82,11 +82,12 @@ function fillindevice()
 {
     global $lang,$error,$devid,$devtype,$acreg,$accn,$actype,$notrack,$noident,$twig;
 
+    // TODO: translate theses labels
     $catarray = array(
         1 => 'Gliders/motoGliders',
         2 => 'Planes',
         3 => 'Ultralights',
-        4 => 'Helicoters',
+        4 => 'Helicopters',
         5 => 'Drones/UAV',
         6 => 'Others',
     );
@@ -102,7 +103,7 @@ function fillindevice()
 
         $aircraft[$row['ac_cat']][] = array(
             'id' => $row['ac_id'],
-            'type' => $row['ac_type'],
+            'type' => $row['ac_type'], // TODO: translate generic models (e.g. balloon, unknown, ground station, paraglider…)
             'selected' => $selected,
         );
     }
